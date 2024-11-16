@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+    <title>hruday.</title>
+</head>
+<body>
+    <button id="darkModeToggle" class="dark-mode-toggle">🌞</button>
+    <a href="mailto:gurijalahruday@gmail.com, hruday.g21@iiits.in" class="contact">contact me</a>
+    <div class="header">        
+        <div class="intro">hi, i am 
+            <span class="name">
+                <a href="/">hruday</a>
+            </span>!</div>
+        </div>
+    <div class="body">
+        <div class="about">
+            <div class="abouta">i am a final year student, electronics and communication.</div>
+            <div class="abouta">i mainly work on web dev, embedded systems and computer vision.</div>
+            <div class="abouta">learning rn - game dev</div>
+        </div>
+        <div class="section">
+            <a href="/projects.html"style="color: red;">projects i have done</a>
+            <div class="section-list">
+                <span><a href="https://github.com/HrudayGurijala/Code-It-main" target="_blank">code-it</a></span>|
+                <span><a href="https://github.com/HrudayGurijala/learnflow" target="_blank">learnflow</a></span>|
+                <span><a href="https://github.com/HrudayGurijala/PlantDiseaseRecognition"target="_blank">plant disease recognition</a></span>|
+                <span><a href="https://github.com/HrudayGurijala/smartirrigationsystem"target="_blank">smart irrigation system</a></span>
+            </div>
+            <div class="working">
+                <a href="https://github.com/HrudayGurijala/space-invaders"style="color: lime"target="_blank">[working on rn]</a>
+            </div>
+        </div>
+        <div class="section">
+            <a href="/papers.html"style="color: red;">research papers</a>
+            <div class="working">
+                <a href="https://colab.research.google.com/drive/1J69X-YhD99FRR46iu9JeevDi9bkKcRJn?usp=sharing"style="color: lime;" target="_blank">[working on rn]</a>
+            </div>
+        </div>
+        <div class="section">
+            <div>know more about me.</div>⭐ 
+            <a href="https://drive.google.com/file/d/1HcD0pKnGyK_5XUhvWXsGpqHpHE_IjP5P/view?usp=drive_link" target="_blank"style="color: red;">resume</a>
+        </div>
+        <div class="section">
+            <div class="section-list">
+                my interests :
+                <span> 🏎️</span>|
+                <span> 🎮</span>|
+                <span> 🏓</span>|
+                <span> 📽️</span>|
+                <span> 🏋️</span>|
+                <span> 🧳</span>
+            </div>
+
+    </div>
+    <footer>
+        <a href="https://github.com/HrudayGurijala" target="_blank">github</a>|
+        <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a>|
+        <a href="https://x.com/hrudaygg" target="_blank">twitter</a>|
+        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
+        <a href="https://buymeacoffee.com/gurijalahrk" target="_blank">biryani</a>
+    </footer>
+</body>
+
+<script>
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+        // Toggle the 'dark-mode' class on the body
+        document.body.classList.toggle('light-mode');
+        
+        // Update button icon based on theme
+        const isDarkMode = document.body.classList.contains('light-mode');
+        document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
+    });
+    
+</script>
+</html>

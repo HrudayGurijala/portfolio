@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "VT323", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode a {
+    color: #000000;
+}
+
+body.light-mode a:hover {
+    color: #697565;
+}
+
+a {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #697565; 
+    text-decoration: underline;
+}
+
+.header {
+    padding: 20px;
+    text-align: left;
+}
+
+.intro {
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+body.light-mode .intro{
+    color: #000000;
+}
+
+.name a {
+    color: #FFEA00;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 50px;
+}
+body.light-mode .name a{
+    color: #FFEA00;
+}
+
+.body {
+    padding: 20px;
+    text-align: left;
+}
+
+.about {
+    gap: 15px;
+    margin: 10px 0;
+}
+
+
+.section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.section a {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section-list {
+    margin-top: 10px;
+}
+
+.section-list span {
+    font-size: 30px;
+    margin-right: 5px;
+}
+.section-list span a{
+    text-decoration: none;
+}
+.working{
+    margin-top: 10px;
+}
+
+.working a{
+    text-decoration: none;
+}
+.project{
+    margin-top: 15px;
+}
+.project a{
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; 
+}
+
+footer a {
+    margin: 0 10px;
+    font-size: 30px;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+
+    text-decoration: none;
+}
+
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.contact{
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}

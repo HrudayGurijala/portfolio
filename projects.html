@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <title>hruday.</title>
+</head>
+<body>
+    <button id="darkModeToggle" class="dark-mode-toggle">🌞</button>
+    <a href="mailto:gurijalahruday@gmail.com, hruday.g21@iiits.in" class="contact">contact me</a>
+    <div class="header">        
+        <div class="intro">hi, i am 
+            <span class="name">
+                <a href="/">hruday</a>
+            </span>!
+        </div>
+    </div>
+    <div class="body">
+        <div class="section">
+            <a href="/projects.html">projects</a>
+            <div class="section-list">
+                <div class="project">
+                    <div class="project-head">
+                        <span>
+                            <a href="https://github.com/HrudayGurijala/Code-It-main" target="_blank" style="color: aqua;">code-it</a>
+                        </span>
+                        <span>
+                            <a href="/live"style="color: red;">live</a>
+                        </span>
+                    </div>
+                    codeit is a node.js-based search engine leveraging express, ejs, and advanced nlp to help users find coding solutions from platforms like leetcode, codeforces, and interviewbit.
+                </div>
+                <div class="project">
+                    <div class="project-head">
+                        <span>
+                            <a href="https://github.com/HrudayGurijala/learnflow" target="_blank"style="color: aqua;">learnflow</a>
+                        </span>
+                        <span>
+                            <a href="/live"style="color: red;">live</a>
+                        </span>
+                    </div>
+                    A simple blog application built using Node.js, Express, and EJS, allowing users to create, view, and manage blog posts. Users can sign up, log in, and delete their own blogs using JWT (JSON Web Tokens) for authentication.
+                </div>
+                <div class="project">
+                    <div class="project-head">
+                        <span>
+                            <a href="https://github.com/HrudayGurijala/PlantDiseaseRecognition" target="_blank"style="color: aqua;">plant disease recognition</a>
+                        </span>
+                        <span>
+                            <a href="/live"style="color: red;">live</a>
+                        </span>
+                    </div>
+                    Used machine learning techniques like CNNs, pretrained models (ResNet-50), and other classifiers. It emphasizes the impact of preprocessing, feature extraction, and model architecture on accuracy to create scalable, automated diagnostics for sustainable agriculture.
+                </div>
+                <div class="project">
+                    <div class="project-head">
+                        <span>
+                            <a href="/https://github.com/HrudayGurijala/smartirrigationsystem" target="_blank"style="color: aqua;"  >smart irrigation</a>
+                        </span>
+                        <span>
+                            <a href="/live"style="color: red;">live</a>
+                        </span>
+                    </div>
+                    The Smart Water Irrigation System is an innovative solution designed to optimize water usage for agricultural purposes. This system leverages smart technology to automate the irrigation process, ensuring efficient water delivery based on real-time soil moisture levels and environmental conditions.
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <a href="https://github.com/HrudayGurijala" target="_blank">github</a>|
+            <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a>|
+            <a href="https://x.com/hrudaygg" target="_blank">twitter</a>|
+            <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
+            <a href="https://buymeacoffee.com/gurijalahrk" target="_blank">biryani</a>
+        </footer>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+        // Toggle the 'dark-mode' class on the body
+        document.body.classList.toggle('light-mode');
+        
+        // Update button icon based on theme
+        const isDarkMode = document.body.classList.contains('light-mode');
+        document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
+    });
+    
+</script>
+</html>
