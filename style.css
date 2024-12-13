@@ -8,12 +8,18 @@
 }
 
 /* style.css */
+html{
+    min-height: 100vh;
+}
 
 body {
     margin: 0;
     font-family: 'VT323', monospace;
     background-color: #000000; 
     color: #ffffff; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body.light-mode {
@@ -39,21 +45,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.header {
-    padding: 20px;
-    text-align: left;
-}
-
-.intro {
-    font-size: 50px;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-}
-
-body.light-mode .intro{
-    color: #000000;
-}
-
 .name a {
     color: #FFEA00;
     font-weight: 700;
@@ -64,29 +55,84 @@ body.light-mode .name a{
     color: #FFEA00;
 }
 
+.navbar {
+    position: sticky; /* Or use fixed */
+    top: 0;
+    display: flex;
+    padding: 20px 0;
+    background-color: #000000;
+}
+body.light-mode .navbar{
+    background-color: #ffffff;
+}
+
+.nav-elements {
+    flex: 1;
+    display: block;
+    padding:  0 30px;
+    align-items: center;
+}
+body.light-mode .nav-elements{
+    background-color: #ffffff;
+}
+
+.contact{
+    font-size: 30px;
+    cursor: pointer;
+    flex: 1;
+    float: right;
+    padding: 5px;
+    padding: 0 20px;
+    padding-top: 10px;
+}
+.intro {
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    padding: 0 40px;
+}
+body.light-mode .intro{
+    color: #000000;
+}
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+}
+
 .body {
     padding: 20px;
-    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .about {
-    gap: 15px;
-    margin: 10px 0;
+    height: 300px;
+    /* width: 600px; */
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
-
-
-.section {
-    margin: 20px 0;
-    text-align: left;
+.image-container{
+    padding-right: 100px;
+}
+.image{
+    height: 350px;
+    width: 350px;
+    border-radius: 3%;
+    transform: rotate(5deg)
 }
 
 .section a {
     font-size: 30px;
     font-weight: bold;
-}
-
-.section-list {
-    margin-top: 10px;
+    flex: 1;
 }
 
 .section-list span {
@@ -96,13 +142,13 @@ body.light-mode .name a{
 .section-list span a{
     text-decoration: none;
 }
-.working{
+/* .working{
     margin-top: 10px;
 }
 
 .working a{
     text-decoration: none;
-}
+}  */
 .project{
     margin-top: 15px;
 }
@@ -110,47 +156,21 @@ body.light-mode .name a{
     text-decoration: none;
 }
 
-footer {
-    position: fixed;
-    bottom: 5px;
+.footer {
+    bottom: 0;
+    right: 0;
+    left: 0;
     width: 100%;
-
     padding: 10px 0;
     text-align: center;
-    z-index: 1000; 
 }
 
-footer a {
+.footer a {
     margin: 0 10px;
     font-size: 30px;
-
     text-decoration: none;
 }
 
-footer a:hover {
-
+.footer a:hover {
     text-decoration: none;
-}
-
-
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.contact{
-    position: fixed;
-    top: 20px;
-    right: 80px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1000;
 }
