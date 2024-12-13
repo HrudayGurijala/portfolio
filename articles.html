@@ -6,12 +6,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
+
     <link rel="stylesheet" href="style.css">
     <title>hruday.</title>
 </head>
 <body>
 
-    <!-- navbar -->
+    <!-- navbar  -->
     <div class="navbar">        
         <div class="intro">hi, i am 
             <span class="name">
@@ -29,45 +31,28 @@
 
     <!-- content -->
     <div class="body">
-        <div class="about">
-            I am a final year student at IIIT Sri City. My projects are mainly focused on areas like software development, embedded systems, and machine learning.
-            <div class="section">
-                <div>know more about me.</div>⭐ 
-                <a href="https://drive.google.com/file/d/1HcD0pKnGyK_5XUhvWXsGpqHpHE_IjP5P/view?usp=drive_link" target="_blank" style="color: red;">resume</a>
-            </div>
-        </div>
 
-        <!-- Flipping image container -->
-        <div class="image-container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="image" src="/hruday.jpeg" alt="Image 1">
-                    </div>
-                    <div class="flip-card-back">
-                        <img class="image" src="/image.png" alt="Image 2">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- footer -->
     <div class="footer">
         <a href="https://github.com/HrudayGurijala" target="_blank">github</a>|
-        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
         <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a>|
-        <a href="https://medium.com/@gurijalahruday" target="_blank">medium</a>|
         <a href="https://x.com/hrudaygg" target="_blank">twitter</a>|
+        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
         <a href="https://buymeacoffee.com/gurijalahrk" target="_blank">biryani</a>
     </div>
 </body>
 
 <script>
     document.getElementById('darkModeToggle').addEventListener('click', () => {
+        // Toggle the 'dark-mode' class on the body
         document.body.classList.toggle('light-mode');
+        
+        // Update button icon based on theme
         const isDarkMode = document.body.classList.contains('light-mode');
         document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
     });
+    
 </script>
 </html>

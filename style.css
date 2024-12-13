@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "VT323", sans-serif;
@@ -8,7 +8,7 @@
 }
 
 /* style.css */
-html{
+html {
     min-height: 100vh;
 }
 
@@ -51,32 +51,31 @@ a:hover {
     text-decoration: none;
     font-size: 50px;
 }
-body.light-mode .name a{
+
+body.light-mode .name a {
     color: #FFEA00;
 }
 
 .navbar {
-    position: sticky; /* Or use fixed */
+    position: sticky; 
     top: 0;
     display: flex;
     padding: 20px 0;
     background-color: #000000;
 }
-body.light-mode .navbar{
+
+body.light-mode .navbar {
     background-color: #ffffff;
 }
 
 .nav-elements {
     flex: 1;
     display: block;
-    padding:  0 30px;
+    padding: 0 30px;
     align-items: center;
 }
-body.light-mode .nav-elements{
-    background-color: #ffffff;
-}
 
-.contact{
+.contact {
     font-size: 30px;
     cursor: pointer;
     flex: 1;
@@ -85,15 +84,18 @@ body.light-mode .nav-elements{
     padding: 0 20px;
     padding-top: 10px;
 }
+
 .intro {
     font-size: 50px;
     letter-spacing: 1px;
     color: #FFFFFF;
     padding: 0 40px;
 }
-body.light-mode .intro{
+
+body.light-mode .intro {
     color: #000000;
 }
+
 .dark-mode-toggle {
     background: none;
     border: none;
@@ -113,47 +115,85 @@ body.light-mode .intro{
 
 .about {
     height: 300px;
-    /* width: 600px; */
     flex: 1;
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-.image-container{
-    padding-right: 100px;
+/* Flipping card styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
 }
-.image{
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px; /* Allows the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flips the card */
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when facing front */
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg); /* Positions the back side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Updated styles for image-container */
+.image-container {
+    padding-right: 100px;
+    display: flex; /* Ensures images are side by side */
+    gap: 20px; /* Adds space between images */
+}
+
+.image {
     height: 350px;
     width: 350px;
     border-radius: 3%;
-    transform: rotate(5deg)
+    transform: rotate(5deg);
 }
 
 .section a {
     font-size: 30px;
     font-weight: bold;
     flex: 1;
-}
-
-.section-list span {
-    font-size: 30px;
-    margin-right: 5px;
-}
-.section-list span a{
-    text-decoration: none;
-}
-/* .working{
-    margin-top: 10px;
-}
-
-.working a{
-    text-decoration: none;
-}  */
-.project{
-    margin-top: 15px;
-}
-.project a{
-    text-decoration: none;
 }
 
 .footer {
