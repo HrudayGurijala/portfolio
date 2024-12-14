@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+    <title>hruday.</title>
+</head>
+<body>
+
+    <!-- navbar  -->
+    <div class="navbar">        
+        <div class="intro">hi, i am 
+            <span class="name">
+                <a href="/">hruday</a>
+            </span>
+        </div>
+        <div class="nav-elements">
+            <button id="darkModeToggle" class="dark-mode-toggle">🌞</button> 
+            <a href="/contact.html" class="contact">contact me</a>
+            <a href="/articles.html" class="contact">articles</a>
+            <a href="/research.html" class="contact">research</a>
+            <a href="/projects.html" class="contact">projects</a>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="body">
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <a href="https://github.com/HrudayGurijala" target="_blank">github</a>|
+        <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a>|
+        <a href="https://x.com/hrudaygg" target="_blank">twitter</a>|
+        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
+        <a href="https://buymeacoffee.com/gurijalahrk" target="_blank">biryani</a>
+    </div>
+</body>
+
+<script>
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+        // Toggle the 'dark-mode' class on the body
+        document.body.classList.toggle('light-mode');
+        
+        // Update button icon based on theme
+        const isDarkMode = document.body.classList.contains('light-mode');
+        document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
+    });
+    
+</script>
+</html>

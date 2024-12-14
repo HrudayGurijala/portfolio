@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
     <title>hruday.</title>
 </head>
 <body>
@@ -30,11 +31,54 @@
     <!-- content -->
     <div class="body">
         <div class="about">
-            I am a final year student at IIIT Sri City. My projects are mainly focused on areas like software development, embedded systems, and machine learning.
+            hello! i am a dedicated software developer with a strong passion for computer vision and embedded systems. i specialize in crafting sophisticated web and mobile applications. i am always engaged in learning new things and honing my skillset. i am available to commit over 60 hours per week, ensuring more than 8-10 hours of time each day. 
+            <!-- <div class="section">
+                <img width="" src="https://github-readme-stats.vercel.app/api/top-langs/?username=HrudayGurijala&layout=compact&hide_title=1&card_width=300&hide=html" alt="Top language used in my repos" />
+            </div> -->
             <div class="section">
-                <div>know more about me.</div>⭐ 
-                <a href="https://drive.google.com/file/d/1HcD0pKnGyK_5XUhvWXsGpqHpHE_IjP5P/view?usp=drive_link" target="_blank" style="color: red;">resume</a>
+                <p style="color: blue;">tech stack</p>
+                <div class="card-tags">
+                    <p class="tag">react</p>
+                    <p class="tag">react-native</p>
+                    <p class="tag">node.js</p>
+                    <p class="tag">typescript</p>
+                    <p class="tag">python</p>
+                    <p class="tag">cpp</p>
+                    <p class="tag">embedded c</p>
+                    <p class="tag">R</p>
+                    <p class="tag">html</p>
+                    <p class="tag">css</p>
+                    <p class="tag">jquery</p>
+                </div>
+                <div class="card-tags">
+                    <p class="tag">tensorflow</p>
+                    <p class="tag">keras</p>
+                    <p class="tag">mongodb</p>
+                    <p class="tag">mysql</p>
+                    <p class="tag">docker</p>
+                    <p class="tag">aws</p>
+                    <p class="tag">opencv</p>
+                    <p class="tag">pygame</p>
+                    <p class="tag">fastapi</p>
+                    <p class="tag">restapi</p>
+                </div>
             </div>
+            <div class="section">
+                check out my <a href="/projects.html" style="color: greenyellow;">projects</a> |
+                <a href="/articles.html" style="color: yellow;">articles</a> 
+            </div>
+            
+            <div class="section">
+                <div>know more about me.</div> 
+                <a href="https://drive.google.com/file/d/1YWACPNla4M6Yv0a2W__RfoY5WJqYKq2-/view?usp=sharing" target="_blank" style="color: red;">resume</a> |
+                <a href="https://github.com/HrudayGurijala" target="_blank" style="color: red;">github</a> |
+                <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank" style="color: red;">leetcode</a>
+                
+            </div>
+            
+                        <div class="section">
+                            my interests : 🏓🎮🏎️🏋️🧳📽️
+                        </div>
         </div>
 
         <!-- Flipping image container -->
@@ -64,10 +108,38 @@
 </body>
 
 <script>
+    //document.getElementById('darkModeToggle').addEventListener('click', () => {
+    //    document.body.classList.toggle('light-mode');
+    //    const isDarkMode = document.body.classList.contains('light-mode');
+    //    document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
+    //});
+
     document.getElementById('darkModeToggle').addEventListener('click', () => {
+        // Toggle the 'light-mode' class
         document.body.classList.toggle('light-mode');
-        const isDarkMode = document.body.classList.contains('light-mode');
-        document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
+    
+        // Check if 'light-mode' is active
+        const isLightMode = document.body.classList.contains('light-mode');
+    
+        // Update the toggle button text
+        document.getElementById('darkModeToggle').textContent = isLightMode ? '🌓' : '🌞';
+    
+        // Save the current theme in localStorage
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
     });
+    
+    // Apply the saved theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+    
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            document.getElementById('darkModeToggle').textContent = '🌓';
+        } else {
+            document.body.classList.remove('light-mode');
+            document.getElementById('darkModeToggle').textContent = '🌞';
+        }
+    });
+    
 </script>
 </html>

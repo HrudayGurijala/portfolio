@@ -48,7 +48,7 @@ a:hover {
 .name a {
     color: #FFEA00;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 50px;
 }
 
@@ -114,7 +114,6 @@ body.light-mode .intro {
 }
 
 .about {
-    height: 300px;
     flex: 1;
     margin: 20px;
     display: flex;
@@ -189,12 +188,169 @@ body.light-mode .intro {
     border-radius: 3%;
     transform: rotate(5deg);
 }
+.section{
+    margin-top: 20px;
+
+}
+.section img{
+    padding-left: 300px;
+}
 
 .section a {
     font-size: 30px;
     font-weight: bold;
     flex: 1;
 }
+
+
+/* projects */
+
+.project {
+    padding: 20px;
+    flex: 1;
+}
+
+.project h1{
+    padding: 0 20px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 400px); /* Two cards per row, responsive */
+    gap: 100px; /* Space between cards */
+    padding: 10px; /* Padding around the container */
+    justify-content: center;
+}
+
+.cards {
+    width: 400px; /* Ensures cards fit within the grid column */
+    height: 500px; /* Fixed height for each card */
+    border: 1px solid #FFEA00; /* Border for visualization */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.card-image {
+    width: 400px;
+    height: 250px;
+    background-color: #697565;
+    border-radius: 10px 10px 0 0 ;
+}
+.card-image img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px 10px 0 0 ;
+
+}
+
+.card-title h3{
+    font-size: 30px;
+    padding:0 15px;
+}
+
+.card-description{
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    overflow-wrap: break-word; /* Compatibility for browsers */
+    white-space: normal; /* Ensures the text wraps instead of staying in one line */
+    color: #697565;
+    padding: 0 15px;
+}
+
+.card-tags {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    overflow-wrap: break-word; 
+}
+
+.card-tags p {
+    background-color: #eaf0e9;
+    padding: 5px;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 10px;
+    border: solid #000000;
+}
+
+.card-buttons {
+    padding: 0 30px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.card-buttons button{
+    background-color: #FFEA00;
+    padding:  7px 20px;
+    border-radius: 20px;
+}
+
+/* research */
+
+
+.research {
+    padding: 20px;
+    flex: 1;
+}
+
+.research h1{
+    padding: 0 20px;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.research-element {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+.research-content{
+    flex: 1;
+}
+.research-image img{
+    height: 300px;
+    width: 300px;
+    background-color: #697565;
+    border-radius: 10px;
+}
+
+
+
+.contact-content{
+    width: 700px;
+    padding-left: 20px;
+}
+
+.contact-content h1{
+    font-size: 60px;
+    color: aqua;
+}
+
+.contact-mail a{
+    font-size: 25px;
+    color: #697565;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
     bottom: 0;
