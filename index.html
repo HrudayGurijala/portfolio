@@ -20,21 +20,18 @@
             </span>
         </div>
         <div class="nav-elements">
-            <button id="darkModeToggle" class="dark-mode-toggle">🌞</button> 
-            <a href="/contact.html" class="contact">contact me</a>
-            <a href="/articles.html" class="contact">articles</a>
-            <a href="/research.html" class="contact">research</a>
             <a href="/projects.html" class="contact">projects</a>
+            <a href="/research.html" class="contact">research</a>
+            <a href="/articles.html" class="contact">articles</a>
+            <a href="/contact.html" class="contact">contact me</a>
+            <button id="darkModeToggle" class="dark-mode-toggle">🌞</button> 
         </div>
     </div>
 
     <!-- content -->
-    <div class="body">
+    <div class="body" style="margin: 10px;">
         <div class="about">
             hello! i am a dedicated software developer with a strong passion for computer vision and embedded systems. i specialize in crafting sophisticated web and mobile applications. i am always engaged in learning new things and honing my skillset. i am available to commit over 60 hours per week, ensuring more than 8-10 hours of time each day. 
-            <!-- <div class="section">
-                <img width="" src="https://github-readme-stats.vercel.app/api/top-langs/?username=HrudayGurijala&layout=compact&hide_title=1&card_width=300&hide=html" alt="Top language used in my repos" />
-            </div> -->
             <div class="section">
                 <p style="color: blue;">tech stack</p>
                 <div class="card-tags">
@@ -49,8 +46,6 @@
                     <p class="tag">html</p>
                     <p class="tag">css</p>
                     <p class="tag">jquery</p>
-                </div>
-                <div class="card-tags">
                     <p class="tag">tensorflow</p>
                     <p class="tag">keras</p>
                     <p class="tag">mongodb</p>
@@ -76,9 +71,9 @@
                 
             </div>
             
-                        <div class="section">
-                            my interests : 🏓🎮🏎️🏋️🧳📽️
-                        </div>
+            <div class="section">
+                my interests : 🏓🎮🏎️🏋️🧳📽️
+            </div>
         </div>
 
         <!-- Flipping image container -->
@@ -98,40 +93,24 @@
 
     <!-- footer -->
     <div class="footer">
-        <a href="https://github.com/HrudayGurijala" target="_blank">github</a>|
-        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a>|
-        <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a>|
-        <a href="https://medium.com/@gurijalahruday" target="_blank">medium</a>|
-        <a href="https://x.com/hrudaygg" target="_blank">twitter</a>|
+        <a href="https://github.com/HrudayGurijala" target="_blank">github</a> |
+        <a href="https://leetcode.com/u/HrudayGurijala/" target="_blank">leetcode</a> |
+        <a href="https://x.com/hrudaygg" target="_blank">twitter</a> |
+        <a href="https://www.linkedin.com/in/hruday-gurijala-61b472248/" target="_blank">linkedin</a> |
         <a href="https://buymeacoffee.com/gurijalahrk" target="_blank">biryani</a>
     </div>
 </body>
 
 <script>
-    //document.getElementById('darkModeToggle').addEventListener('click', () => {
-    //    document.body.classList.toggle('light-mode');
-    //    const isDarkMode = document.body.classList.contains('light-mode');
-    //    document.getElementById('darkModeToggle').textContent = isDarkMode ? '🌓' : '🌞';
-    //});
-
     document.getElementById('darkModeToggle').addEventListener('click', () => {
-        // Toggle the 'light-mode' class
         document.body.classList.toggle('light-mode');
-    
-        // Check if 'light-mode' is active
         const isLightMode = document.body.classList.contains('light-mode');
-    
-        // Update the toggle button text
         document.getElementById('darkModeToggle').textContent = isLightMode ? '🌓' : '🌞';
-    
-        // Save the current theme in localStorage
         localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
     });
-    
-    // Apply the saved theme on page load
+
     window.addEventListener('DOMContentLoaded', () => {
         const savedTheme = localStorage.getItem('theme');
-    
         if (savedTheme === 'light') {
             document.body.classList.add('light-mode');
             document.getElementById('darkModeToggle').textContent = '🌓';
@@ -140,6 +119,5 @@
             document.getElementById('darkModeToggle').textContent = '🌞';
         }
     });
-    
 </script>
 </html>

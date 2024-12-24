@@ -4,10 +4,9 @@
     font-family: "VT323", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size: clamp(16px, 2vw, 30px);
 }
 
-/* style.css */
 html {
     min-height: 100vh;
 }
@@ -27,111 +26,158 @@ body.light-mode {
     color: #000000;
 }
 
-body.light-mode a {
-    color: #000000;
+/* Navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 20px;
+    background-color: #000000;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-body.light-mode a:hover {
-    color: #697565;
-}
-
-a {
-    text-decoration: underline;
-    color: #ffffff;
-}
-
-a:hover {
-    color: #697565; 
-    text-decoration: underline;
+.intro {
+    font-size: clamp(30px, 4vw, 50px);
+    letter-spacing: 1px;
 }
 
 .name a {
     color: #FFEA00;
     font-weight: 700;
     text-decoration: underline;
-    font-size: 50px;
+    font-size: clamp(35px, 5vw, 50px);
 }
 
-body.light-mode .name a {
+/* Card Container and Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cards {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 234, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    min-height: 500px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 234, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cards:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: #FFEA00;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card-title h3 {
+    font-size: clamp(24px, 2.5vw, 30px);
+    margin-bottom: 10px;
     color: #FFEA00;
 }
 
-.navbar {
-    position: sticky; 
-    top: 0;
+.card-description {
+    color: #a0a0a0;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.card-tags {
     display: flex;
-    padding: 20px 0;
-    background-color: #000000;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    justify-content: flex-start;
 }
 
-body.light-mode .navbar {
-    background-color: #ffffff;
-}
-
-.nav-elements {
-    flex: 1;
-    display: block;
-    padding: 0 30px;
-    align-items: center;
-}
-
-.contact {
-    font-size: 30px;
-    cursor: pointer;
-    flex: 1;
-    float: right;
-    padding: 5px;
-    padding: 0 20px;
-    padding-top: 10px;
-}
-
-.intro {
-    font-size: 50px;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-    padding: 0 40px;
-}
-
-body.light-mode .intro {
+.card-tags p {
+    background-color: rgba(255, 255, 255, 0.9);
     color: #000000;
-}
-
-.dark-mode-toggle {
-    background: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: clamp(14px, 1.5vw, 18px);
     border: none;
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
+    transition: all 0.3s ease;
 }
 
-.body {
-    padding: 20px;
-    flex: 1;
+.card-tags p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.card-buttons {
     display: flex;
-    flex-direction: row;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
 }
 
-.about {
-    flex: 1;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
+.card-buttons button {
+    background-color: #FFEA00;
+    padding: 8px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
-/* Flipping card styles */
+
+.card-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 234, 0, 0.3);
+}
+
+/* Image Container with Flip Animation */
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
 }
 
 .flip-card {
     background-color: transparent;
     width: 350px;
     height: 350px;
-    perspective: 1000px; /* Allows the 3D effect */
+    perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -139,12 +185,12 @@ body.light-mode .intro {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flips the card */
+    transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -152,221 +198,201 @@ body.light-mode .intro {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hides the back side when facing front */
+    backface-visibility: hidden;
     border-radius: 10px;
-}
-
-.flip-card-front {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .flip-card-back {
-    transform: rotateY(180deg); /* Positions the back side */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: rotateY(180deg);
 }
 
 .image {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* Updated styles for image-container */
-.image-container {
-    padding-right: 100px;
-    display: flex; /* Ensures images are side by side */
-    gap: 20px; /* Adds space between images */
+.dark-mode-toggle{
+    background-color: #000000;
+    border: #000000;
 }
 
-.image {
-    height: 350px;
-    width: 350px;
-    border-radius: 3%;
-    transform: rotate(5deg);
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: minmax(300px, 1fr);
+        padding: 10px;
+        margin:10px;
+    }
+
+    .cards {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .image-container {
+        padding: 15px;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .card-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
 }
-.section{
-    margin-top: 20px;
 
+@media (max-width: 480px) {
+    .card-tags {
+        justify-content: center;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-buttons button {
+        width: 80%;
+    }
 }
-.section img{
-    padding-left: 300px;
-}
 
-.section a {
-    font-size: 30px;
-    font-weight: bold;
-    flex: 1;
-}
-
-
-/* projects */
-
-.project {
+/* Utility classes and other styles remain unchanged */
+.body {
     padding: 20px;
     flex: 1;
-}
-
-.project h1{
-    padding: 0 20px;
-    font-size: 40px;
-    font-weight: 200;
-}
-.card-container{
-    display: grid;
-    grid-template-columns: repeat(2, 400px); /* Two cards per row, responsive */
-    gap: 100px; /* Space between cards */
-    padding: 10px; /* Padding around the container */
-    justify-content: center;
-}
-
-.cards {
-    width: 400px; /* Ensures cards fit within the grid column */
-    height: 500px; /* Fixed height for each card */
-    border: 1px solid #FFEA00; /* Border for visualization */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-.card-image {
-    width: 400px;
-    height: 250px;
-    background-color: #697565;
-    border-radius: 10px 10px 0 0 ;
-}
-.card-image img{
-    width: 400px;
-    height: 250px;
-    border-radius: 10px 10px 0 0 ;
-
-}
-
-.card-title h3{
-    font-size: 30px;
-    padding:0 15px;
-}
-
-.card-description{
-    word-wrap: break-word; /* Ensures long words wrap to the next line */
-    overflow-wrap: break-word; /* Compatibility for browsers */
-    white-space: normal; /* Ensures the text wraps instead of staying in one line */
-    color: #697565;
-    padding: 0 15px;
-}
-
-.card-tags {
     display: flex;
-    margin-top: 15px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    word-wrap: break-word; /* Ensures long words wrap to the next line */
-    overflow-wrap: break-word; 
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.card-tags p {
-    background-color: #eaf0e9;
-    padding: 5px;
-    font-size: 20px;
-    color: #000000;
-    border-radius: 10px;
-    border: solid #000000;
-}
-
-.card-buttons {
-    padding: 0 30px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-.card-buttons button{
-    background-color: #FFEA00;
-    padding:  7px 20px;
-    border-radius: 20px;
-}
-
-/* research */
-
-
-.research {
-    padding: 20px;
+.about {
     flex: 1;
+    margin: 20px;
 }
-
-.research h1{
-    padding: 0 20px;
-    font-size: 40px;
-    font-weight: 200;
-}
-
-.research-element {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    padding: 0 20px;
-}
-
-.research-content{
-    flex: 1;
-}
-.research-image img{
-    height: 300px;
-    width: 300px;
-    background-color: #697565;
-    border-radius: 10px;
-}
-
-
-
-.contact-content{
-    width: 700px;
-    padding-left: 20px;
-}
-
-.contact-content h1{
-    font-size: 60px;
-    color: aqua;
-}
-
-.contact-mail a{
-    font-size: 25px;
-    color: #697565;
-    margin-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
-.footer a {
-    margin: 0 10px;
-    font-size: 30px;
-    text-decoration: none;
+/* Dark/Light mode specific styles */
+body.light-mode .navbar {
+    background-color: #ffffff;
 }
 
-.footer a:hover {
-    text-decoration: none;
+body.light-mode .dark-mode-toggle{
+    background-color: #ffffff;
+    border: #ffffff;
+}
+
+body.light-mode .cards {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(255, 234, 0, 0.5);
+}
+/* Keep the existing body styles */
+.body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Image container styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+/* About section styles */
+.about {
+    flex: 1;
+    margin: 20px;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        order: -1; /* This moves the image container to the top */
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .flip-card {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: 'center';
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-tags {
+        justify-content: center;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .body {
+        padding: 5px;
+    }
+
+    .image-container {
+        padding: 10px;
+    }
+
+    .flip-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about {
+        margin: 5px;
+    }
+
+    .card-tags {
+        gap: 5px;
+    }
+
+    .card-tags p {
+        font-size: clamp(12px, 1.2vw, 16px);
+        padding: 4px 10px;
+    }
 }
