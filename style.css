@@ -178,6 +178,7 @@ h1 {
     width: 350px;
     height: 350px;
     perspective: 1000px;
+    transform: rotate(7deg);
 }
 
 .flip-card-inner {
