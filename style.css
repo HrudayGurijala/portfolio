@@ -26,13 +26,13 @@ body.light-mode {
     color: #000000;
 }
 
-/* Navbar styles */
 .navbar {
     position: sticky;
     top: 0;
     display: flex;
     padding: 20px;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
     z-index: 1000;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@ body.light-mode {
 
 .cards {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 234, 0, 0.3);
+    /* border: 1px solid rgba(255, 234, 0, 0.3); */
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -75,7 +75,7 @@ body.light-mode {
 
 .cards:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 234, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 234, 0, 0.5);
 }
 
 .card-image {
@@ -87,7 +87,6 @@ body.light-mode {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -160,7 +159,7 @@ h1 {
 
 .card-buttons button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 234, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 234, 0, 0.5);
 }
 
 /* Image Container with Flip Animation */
@@ -287,7 +286,8 @@ h1 {
 
 /* Dark/Light mode specific styles */
 body.light-mode .navbar {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 body.light-mode .dark-mode-toggle{
@@ -332,6 +332,10 @@ body.light-mode .cards {
     margin: 20px;
 }
 
+.section{
+    margin-bottom: 15px;
+}
+
 /* Media query for tablets and smaller screens */
 @media (max-width: 768px) {
     .body {
@@ -363,6 +367,7 @@ body.light-mode .cards {
         align-items: center;
         gap: 10px;
         padding-top: 10px;
+        
     }
 
     .card-tags {
@@ -486,7 +491,7 @@ body.light-mode .cards {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 234, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 234, 0, 0.5);
 }
 
 /* Contact Info Styles */
@@ -498,7 +503,7 @@ body.light-mode .cards {
 
 .info-card {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 234, 0, 0.3);
+    border: 1px solid rgba(255, 234, 0, 0.5);
     border-radius: 15px;
     padding: 1.5rem;
 }
@@ -589,4 +594,27 @@ body.light-mode .social-link {
 
 body.light-mode .info-card a {
     color: #000000;
+}
+/* For WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+
+/* For Firefox (using scrollbar-width and scrollbar-color) */
+body {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
 }
