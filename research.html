@@ -9,12 +9,128 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>hruday.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Research Section Styles */
+        .research {
+            margin: 0 auto;
+            padding: 2rem;
+            max-width: 1400px;
+        }
+
+        .research h1 {
+            font-size: 2rem;
+            color: #FFEA00;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .research-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 234, 0, 0.3);
+        }
+
+        .research-text {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .research-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .research-title a {
+            font-size: 0.9rem;
+            color: aqua;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .research-title a:hover {
+            color: #FFEA00;
+            text-decoration: underline;
+        }
+
+        .research-description {
+            font-size: 0.7rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .research-tags .tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .research-tags .tag:hover {
+            background: rgba(255, 234, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .research-image {
+            flex: 0 0 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .research-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 234, 0, 0.3);
+            transition: transform 0.5s ease;
+        }
+
+        .research-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 968px) {
+            .research-item {
+                flex-direction: column;
+            }
+
+            .research-text {
+                padding-right: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .research h1 {
+                font-size: 2.4rem;
+            }
+
+            .research-title a {
+                font-size: 1.6rem;
+            }
+
+            .research-description {
+                font-size: 1.3rem;
+            }
+
+            .research-tags .tag {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- navbar  -->
     <div class="navbar">
         <div class="intro">hi, i am
@@ -33,54 +149,58 @@
 
     <!-- content -->
     <div class="research">
-
         <h1>My research 🔎</h1>
-        <div class="research-element">
-            <div class="research-content">
-                <div style="margin-bottom: 20px;">
-                    <a href="https://drive.google.com/file/d/1JQRFd8sZATFXZrUd7b114mOH8fvZPoph/view?usp=sharing"
-                        target="_blank" style="color: aqua;">design of efficient full adder using qca</a>
+        
+        <div class="research-item">
+            <div class="research-text">
+                <div class="research-title">
+                    <a href="https://drive.google.com/file/d/1JQRFd8sZATFXZrUd7b114mOH8fvZPoph/view?usp=sharing" target="_blank">
+                        design of efficient full adder using qca
+                    </a>
                 </div>
-                This paper presents a QCA full adder design using two 2-input XOR gates and a majority gate, achieving a
-                16.95% reduction in cell count, a 22.22% improvement in the cost function, and lower latency.
-                Simulations confirm its efficiency, reliability, and suitability for advanced digital systems like
-                microprocessors.
-                <div class="card-tags">
-                    <p class="tag" style="font-size: 30px;">QCA Designer</p>
-                    <p class="tag" style="font-size: 30px;">QCA Pro</p>
-                    <p class="tag" style="font-size: 30px;">AVLSI</p>
-                    <p class="tag" style="font-size: 30px;">nano-tech</p>
-                    <p class="tag" style="font-size: 30px;">circuit design</p>
+                <div class="research-description">
+                    This paper presents a QCA full adder design using two 2-input XOR gates and a majority gate, achieving a
+                    16.95% reduction in cell count, a 22.22% improvement in the cost function, and lower latency.
+                    Simulations confirm its efficiency, reliability, and suitability for advanced digital systems like
+                    microprocessors.
                 </div>
-            </div>
-            <div class="research-image">
-                <img src="/assets/research1.png" alt="QCA design" >
-            </div>
-        </div>
-
-        <div class="research-element">
-            <div class="research-content">
-                <div style="margin-bottom: 20px;">
-                    <a href="https://docs.google.com/presentation/d/1VIvirwim13tCfBrbWL96MOMF8fEcEXUu/edit?usp=sharing&ouid=110831115600444008613&rtpof=true&sd=true"
-                        target="_blank" style="color: aqua;">deep learning based cooperative relay selection in virtual
-                        mimo(btp)</a>
-                </div>
-                Devised a prediction algorithm using deep learning to estimate willingness of the inactive users in a
-                VAA cell. Achieved 35% faster discovery time with an impressive 98.2% accuracy. Also used a
-                cryptographic algorithm to ensure reliability ans security in industrial IOT networks.
-                <div class="card-tags">
-                    <p class="tag" style="font-size: 30px;">Wireless Communication</p>
-                    <p class="tag" style="font-size: 30px;">Deep NN</p>
-                    <p class="tag" style="font-size: 30px;">deep learning</p>
-                    <p class="tag" style="font-size: 30px;">ECC cryptography</p>
-                    <p class="tag" style="font-size: 30px;">V-MIMO</p>
+                <div class="research-tags">
+                    <div class="tag">QCA Designer</div>
+                    <div class="tag">QCA Pro</div>
+                    <div class="tag">AVLSI</div>
+                    <div class="tag">nano-tech</div>
+                    <div class="tag">circuit design</div>
                 </div>
             </div>
             <div class="research-image">
-                <img src="/assets/research2.png" alt="coorperative relay selection">
+                <img src="/assets/research1.png" alt="QCA design">
             </div>
         </div>
 
+        <div class="research-item">
+            <div class="research-text">
+                <div class="research-title">
+                    <a href="https://docs.google.com/presentation/d/1VIvirwim13tCfBrbWL96MOMF8fEcEXUu/edit?usp=sharing&ouid=110831115600444008613&rtpof=true&sd=true" target="_blank">
+                        deep learning based cooperative relay selection in virtual mimo(btp)
+                    </a>
+                </div>
+                <div class="research-description">
+                    Devised a prediction algorithm using deep learning to estimate willingness of the inactive users in a
+                    VAA cell. Achieved 35% faster discovery time with an impressive 98.2% accuracy. Also used a
+                    cryptographic algorithm to ensure reliability ans security in industrial IOT networks.
+                </div>
+                <div class="research-tags">
+                    <div class="tag">Wireless Communication</div>
+                    <div class="tag">Deep NN</div>
+                    <div class="tag">deep learning</div>
+                    <div class="tag">ECC cryptography</div>
+                    <div class="tag">V-MIMO</div>
+                </div>
+            </div>
+            <div class="research-image">
+                <img src="/assets/research2.png" alt="cooperative relay selection">
+            </div>
+        </div>
     </div>
 
     <!-- footer -->
@@ -95,201 +215,5 @@
         &copy; 2024 Design and crafted by Hruday Gurijala
     </footer>
 </body>
-
-<!-- <script>
-    document.getElementById('darkModeToggle').addEventListener('click', () => {
-        // Toggle the 'light-mode' class
-        document.body.classList.toggle('light-mode');
-
-        // Check if 'light-mode' is active
-        const isLightMode = document.body.classList.contains('light-mode');
-
-        // Update the toggle button text
-        document.getElementById('darkModeToggle').textContent = isLightMode ? '🌓' : '🌞';
-
-        // Save the current theme in localStorage
-        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-    });
-
-    // Apply the saved theme on page load
-    window.addEventListener('DOMContentLoaded', () => {
-        const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-mode');
-            document.getElementById('darkModeToggle').textContent = '🌓';
-        } else {
-            document.body.classList.remove('light-mode');
-            document.getElementById('darkModeToggle').textContent = '🌞';
-        }
-    });
-
-
-</script> -->
-<style>
-    /*research*/
-    /* Add these styles to your existing style.css */
-
-    .research {
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    .research h1 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        color: #FFEA00;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .research-element {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 2rem;
-        margin-bottom: 4rem;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 234, 0, 0.5);
-        border-radius: 15px;
-        padding: 2rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .research-element:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(255, 234, 0, 0.1);
-    }
-
-    .research-content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .research-content a {
-        font-size: clamp(1.5rem, 2vw, 2rem);
-        color: aqua;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-block;
-    }
-
-    .research-content a:hover {
-        color: #FFEA00;
-        transform: translateX(10px);
-    }
-
-    .research-content p {
-        font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-        line-height: 1.6;
-        opacity: 0.9;
-    }
-
-    .research-image {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 234, 0, 0.3);
-    }
-
-    .research-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .research-element:hover .research-image img {
-        transform: scale(1.05);
-    }
-
-    .card-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 1rem;
-    }
-
-    .card-tags .tag {
-        background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-        transition: all 0.3s ease;
-    }
-
-    .card-tags .tag:hover {
-        background: rgba(255, 234, 0, 0.2);
-        transform: translateY(-2px);
-    }
-
-    /* Light mode styles */
-    body.light-mode .research-element {
-        background: rgba(0, 0, 0, 0.02);
-    }
-
-    body.light-mode .card-tags .tag {
-        background: rgba(0, 0, 0, 0.1);
-        color: #000000;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 968px) {
-        .research-element {
-            grid-template-columns: 1fr;
-        }
-
-        .research {
-            padding: 1rem;
-        }
-
-        .research-image {
-            height: 300px;
-        }
-
-        .card-tags {
-            justify-content: center;
-        }
-
-        .card-tags .tag {
-            font-size: 1rem;
-        }
-    }
-
-    /* Animation for page load */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .research-element {
-        animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .research-element:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    /* Scrollbar customization */
-    .research::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .research::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .research::-webkit-scrollbar-thumb {
-        background: #FFEA00;
-        border-radius: 4px;
-    }
-</style>
 
 </html>
